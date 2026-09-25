@@ -9,18 +9,34 @@
 
 <body>
 
-<div class="container">
+<div class="grid-background"></div>
+
+<div class="app">
 
     <header>
-        <h1>ARCADE CONTROL CENTER</h1>
-        <p>Bridge & Adapter Pattern System</p>
+        <div class="top-line">
+            <span class="live"><i></i> SYSTEM ONLINE</span>
+            <span id="clock">00:00:00</span>
+        </div>
+
+        <div class="logo">
+            <span>◈</span>
+            ARCADE
+            <strong>CONTROL CENTER</strong>
+        </div>
+
+        <p>ADVANCED GAME DEVICE MANAGEMENT SYSTEM</p>
     </header>
 
     <main>
 
-        <section class="panel">
+        <section class="card configuration">
+            <div class="card-title">
+                <span>01</span>
+                DEVICE CONFIGURATION
+            </div>
 
-            <label>Game Device</label>
+            <label>GAME DEVICE</label>
 
             <select id="device">
                 <option value="arcade">Arcade Machine</option>
@@ -28,46 +44,118 @@
                 <option value="legacy">Legacy Arcade Machine</option>
             </select>
 
-            <label>Controller</label>
+            <label>CONTROLLER</label>
 
             <select id="controller">
                 <option value="basic">Basic Controller</option>
                 <option value="advanced">Advanced Controller</option>
             </select>
 
+            <div class="architecture">
+                <div>CONTROLLER</div>
+                <span>→</span>
+                <div>GAME DEVICE</div>
+            </div>
         </section>
 
-        <section class="controls">
+        <section class="card command-center">
 
-            <button onclick="sendCommand('start')">START</button>
-            <button onclick="sendCommand('stop')">STOP</button>
-            <button onclick="sendCommand('up')">UP</button>
-            <button onclick="sendCommand('down')">DOWN</button>
-            <button onclick="sendCommand('special')">SPECIAL ACTION</button>
+            <div class="card-title">
+                <span>02</span>
+                COMMAND CENTER
+            </div>
+
+            <div class="power-buttons">
+                <button class="btn start" onclick="sendCommand('start')">
+                    <span>▶</span>
+                    START
+                </button>
+
+                <button class="btn stop" onclick="sendCommand('stop')">
+                    <span>■</span>
+                    STOP
+                </button>
+            </div>
+
+            <div class="joystick">
+
+                <button onclick="sendCommand('up')" class="direction up">
+                    ▲
+                </button>
+
+                <button onclick="sendCommand('down')" class="direction down">
+                    ▼
+                </button>
+
+            </div>
+
+            <button class="special" onclick="sendCommand('special')">
+                <span>✦</span>
+                SPECIAL ACTION
+                <span>✦</span>
+            </button>
 
         </section>
 
-        <section class="status">
+        <section class="card status-card">
 
-            <h2>STATUS</h2>
+            <div class="card-title">
+                <span>03</span>
+                SYSTEM STATUS
+            </div>
 
-            <div id="status">
-                STOPPED
+            <div class="status-box">
+
+                <div class="status-light">
+                    <div></div>
+                </div>
+
+                <div>
+                    <small>CURRENT STATUS</small>
+                    <h2 id="status">STOPPED</h2>
+                </div>
+
+            </div>
+
+            <div class="device-info">
+                <span>ACTIVE DEVICE</span>
+                <strong id="device-name">Arcade Machine</strong>
+            </div>
+
+            <div class="device-info">
+                <span>COMMANDS</span>
+                <strong id="command-count">0</strong>
             </div>
 
         </section>
 
-        <section class="log">
+        <section class="card log-card">
 
-            <h2>ACTIVITY LOG</h2>
+            <div class="card-title">
+                <span>04</span>
+                ACTIVITY MONITOR
+            </div>
 
-            <div id="log"></div>
+            <div id="log">
+                <div class="log-entry">
+                    <span>00:00:00</span>
+                    SYSTEM INITIALIZED
+                </div>
+            </div>
 
         </section>
 
     </main>
 
+    <footer>
+        BRIDGE + ADAPTER DESIGN PATTERNS
+        <span>•</span>
+        BY: SHARY VELASQUEZ 
+    </footer>
+
 </div>
+
+<div id="pulse"></div>
 
 <script src="script.js"></script>
 
