@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Control Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>ARCADE CONTROL CENTER</h1>
+        <p>Bridge & Adapter Pattern System</p>
+    </header>
+
+    <main>
+
+        <section class="panel">
+
+            <label>Game Device</label>
+
+            <select id="device">
+                <option value="arcade">Arcade Machine</option>
+                <option value="racing">Racing Machine</option>
+                <option value="legacy">Legacy Arcade Machine</option>
+            </select>
+
+            <label>Controller</label>
+
+            <select id="controller">
+                <option value="basic">Basic Controller</option>
+                <option value="advanced">Advanced Controller</option>
+            </select>
+
+        </section>
+
+        <section class="controls">
+
+            <button onclick="sendCommand('start')">START</button>
+            <button onclick="sendCommand('stop')">STOP</button>
+            <button onclick="sendCommand('up')">UP</button>
+            <button onclick="sendCommand('down')">DOWN</button>
+            <button onclick="sendCommand('special')">SPECIAL ACTION</button>
+
+        </section>
+
+        <section class="status">
+
+            <h2>STATUS</h2>
+
+            <div id="status">
+                STOPPED
+            </div>
+
+        </section>
+
+        <section class="log">
+
+            <h2>ACTIVITY LOG</h2>
+
+            <div id="log"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

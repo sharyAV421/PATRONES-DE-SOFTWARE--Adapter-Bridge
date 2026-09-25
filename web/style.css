@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #10131a;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #aaa;
+}
+
+.panel,
+.status,
+.log {
+    background: #191e27;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #0e1117;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #2d6cdf;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.status div {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px;
+    background: #0e1117;
+    border-radius: 8px;
+}
+
+.log {
+    min-height: 150px;
+}
+
+#log {
+    background: #0e1117;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 100px;
+}
+
+.log-entry {
+    padding: 5px 0;
+    color: #aaa;
+}
